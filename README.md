@@ -1,9 +1,41 @@
+<img src="https://github.com/user-attachments/assets/872fd5ca-8027-4abd-aafa-f3cd9661c4a7" alt="Permissios Client For SwiftUI & UIKit" width="300" height="300" />
+
 # Permissable
 An Swift Package for handling basic Permissions such as Camera, Microphone, PhotoLibrary and Push Notifications.
 
-<img src="https://github.com/user-attachments/assets/a2c6c537-1c84-4fda-9e7e-92da8ae713b4" alt="Permissios Client For SwiftUI & UIKit Logo" width="231" height="289" />
 
-By Default Permissable includes Validators which perform validation for their specified service. These Validators conform to the ```PermissionsValidatorProtcol``` and can easily be  added to the ```PermissionsClient``` to handle additional validation.
+- ****Supports****: Swift 5.9
+
+- ****Platforms****: iOS 16+
+
+## Installation
+
+To install via SPM add the following to your `Package.swift`:
+
+  
+
+```swift
+
+dependencies: [
+.package(url: "https://github.com/BlackMirrorz/Permissable", from: "1.0.0")
+]
+
+```
+
+Then, import `Permissable` anywhere you'd like to use it:
+
+  
+```swift
+
+import Permissable
+
+```
+
+## Overview:
+
+By Default Permissable includes Validators which perform validation for their specified service.
+
+These Validators conform to the ```PermissionsValidatorProtcol``` and can easily be  added to the ```PermissionsClient``` to handle additional validation.
 
 Current Validators are:
 1. CameraPermissionsValidator
@@ -11,7 +43,6 @@ Current Validators are:
 3. PhotLibraryPermissionsValidator
 4. PushNotificationsValidator
    
-
 
 ## PermissionsClient:
 The PermissionsClient is the core component responsible for managing and validating permissions. It acts as a central hub to which you can add various permission services along with their corresponding validators.
@@ -131,5 +162,4 @@ client.registerProviders([breakService: BreakTimeValidator()])
 ```
 
 ## Architecture:
-<img width="1248" alt="uml" src="https://github.com/user-attachments/assets/93038587-1ca7-43bf-b4db-d1e1c2b92e35" />
-
+<img width="1248" alt="uml" src="https://github.com/user-attachments/assets/0949d6a0-0907-4811-9d1f-ae5f23b99f73" />
