@@ -43,6 +43,26 @@ Current Validators are:
 3. PhotLibraryPermissionsValidator
 4. PushNotificationsValidator
    
+### Info.plist
+Don't be a dummy like me and forgot to add the required keys to your info.plist:
+
+📸 Camera Usage Permission
+```swift
+<key>NSCameraUsageDescription</key>
+<string>This app requires access to the camera for capturing photos and videos.</string>
+```
+
+🖼 Photo Library Usage Permission
+```swift
+<key>NSPhotoLibraryUsageDescription</key>
+<string>This app needs access to your photo library to save and load images.</string>
+```
+
+🎤 Microphone Usage Permission
+```swift
+<key>NSMicrophoneUsageDescription</key>
+<string>This app needs access to the microphone for audio recording.</string>
+```
 
 ## PermissionsClient:
 The PermissionsClient is the core component responsible for managing and validating permissions. It acts as a central hub to which you can add various permission services along with their corresponding validators.
